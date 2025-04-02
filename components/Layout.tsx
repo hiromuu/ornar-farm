@@ -1,4 +1,4 @@
-import Footer from "@/components/ui/footer";
+"use client";
 import NavBar from "@/components/ui/navbar";
 import { ReactNode } from "react";
 
@@ -7,7 +7,6 @@ export default function Layout({ children }: { children: ReactNode }) {
     <div className="font-sans bg-white text-gray-800">
       <NavBar />
       <main>{children}</main>
-      <Footer />
     </div>
   );
 }

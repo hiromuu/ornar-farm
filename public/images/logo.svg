@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景の円 -->
+  <circle cx="256" cy="256" r="240" fill="#4ADE80" fill-opacity="0.1"/>
+  
+  <!-- 葉っぱのパターン -->
+  <path d="M256 80C256 80 320 160 320 256C320 352 256 432 256 432" stroke="#4ADE80" stroke-width="24" stroke-linecap="round"/>
+  <path d="M256 80C256 80 192 160 192 256C192 352 256 432 256 432" stroke="#4ADE80" stroke-width="24" stroke-linecap="round"/>
+  
+  <!-- 中心の円 -->
+  <circle cx="256" cy="256" r="64" fill="#4ADE80"/>
+  
+  <!-- 農場を表す線 -->
+  <path d="M256 192V320M192 256H320" stroke="white" stroke-width="16" stroke-linecap="round"/>
+</svg> 
