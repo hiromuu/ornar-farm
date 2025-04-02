@@ -1,12 +1,12 @@
 "use client";
-
+import Layout from "@/components/Layout";
 import { Hero } from "@/components/ui/hero";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="bg-white min-h-screen">
+    <Layout>
       <Hero
         title="また帰りたくなる場所へ"
         subtitle="小布施がつなぐ四季と人"
@@ -14,8 +14,8 @@ export default function Home() {
         cta={{ text: "プロジェクトを見る", href: "/about" }}
       />
 
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="py-24 bg-[#f9f9f9]">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10">
           <FeatureCard
             title="四季の体験"
             description="田植え、栗拾い、焚き火…季節ごとの農体験で暮らしに触れる。"
@@ -36,30 +36,24 @@ export default function Home() {
           />
         </div>
       </section>
-    </div>
+    </Layout>
   );
 }
 
-function FeatureCard({
-  title,
-  description,
-  image,
-  href,
-}: {
-  title: string;
-  description: string;
-  image: string;
-  href: string;
-}) {
+function FeatureCard({ title, description, image, href }: any) {
   return (
     <Link href={href}>
-      <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-        <div className="h-48 relative">
-          <Image src={image} alt={title} fill className="object-cover" />
-        </div>
+      <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all">
+        <Image
+          src={image}
+          alt={title}
+          width={600}
+          height={208}
+          className="w-full object-cover"
+        />
         <div className="p-6">
-          <h3 className="text-xl font-bold mb-2">{title}</h3>
-          <p className="text-gray-600 text-sm">{description}</p>
+          <h3 className="text-lg font-bold mb-2 text-gray-800">{title}</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
         </div>
       </div>
     </Link>
